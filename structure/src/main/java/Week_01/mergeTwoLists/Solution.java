@@ -32,14 +32,12 @@ public class Solution {
             }
 
             if(tempNode1.val > tempNode2.val){
-                ListNode tempNode = new ListNode(tempNode2.val,tempNode2.next);
-                currNode.next = tempNode;
-                currNode = tempNode;
+                currNode.next = tempNode2;
+                currNode = tempNode2;
                 tempNode2 = tempNode2.next;
             }else{
-                ListNode tempNode = new ListNode(tempNode1.val,tempNode1.next);
-                currNode.next = tempNode;
-                currNode = tempNode;
+                currNode.next = tempNode1;
+                currNode = tempNode1;
                 tempNode1 = tempNode1.next;
             }
         }
