@@ -1,4 +1,4 @@
-//给定一个二叉树，返回它的 前序 遍历。
+package Week_02.preorderTraversal;//给定一个二叉树，返回它的 前序 遍历。
 //
 // 示例:
 //
@@ -29,7 +29,6 @@
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.tree.TreeNode;
 import org.junit.Test;
 
 

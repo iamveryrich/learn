@@ -1,4 +1,4 @@
-//给定一个二叉树，返回它的 前序 遍历。
+package Week_02.inorderTraversal;//给定一个二叉树，返回它的中序 遍历。
 //
 // 示例:
 //
@@ -9,11 +9,10 @@
 //    /
 //   3
 //
-//输出: [1,2,3]
-//
+//输出: [1,3,2]
 //
 // 进阶: 递归算法很简单，你可以通过迭代算法完成吗？
-// Related Topics 栈 树
+// Related Topics 栈 树 哈希表
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
@@ -29,7 +28,6 @@
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.tree.TreeNode;
 import org.junit.Test;
 
 
@@ -42,19 +40,19 @@ public class Solution {
         TreeNode(int x) { val = x; }
     }
 
-    public List<Integer> preorderTraversal(TreeNode root) {
+    public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> values = new ArrayList<>();
-        readPre(root,values);
+        readInMid(root,values);
         return values;
     }
 
-    public void readPre(TreeNode root,List<Integer> values){
+    public void readInMid(TreeNode root,List<Integer> values){
         if(root == null) {
             return;
         }
+        readInMid(root.left,values);
         values.add(root.val);
-        readPre(root.left,values);
-        readPre(root.right,values);
+        readInMid(root.right,values);
     }
 
     @Test
@@ -66,7 +64,7 @@ public class Solution {
         node1.left  = node2;
         node1.right = node3;
         node2.left = node4;
-        System.out.println(preorderTraversal(node1));
+        System.out.println(inorderTraversal(node1));
 
 
     }
