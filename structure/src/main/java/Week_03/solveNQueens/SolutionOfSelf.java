@@ -1,4 +1,4 @@
-//n 皇后问题研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。
+package Week_03.solveNQueens;//n 皇后问题研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。
 //
 //
 //
@@ -43,7 +43,7 @@ import java.util.Set;
 import org.junit.Test;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-public class Solution {
+public class SolutionOfSelf {
 
   public List<List<String>> solveNQueens(int n) {
     List<List<String>> result = new LinkedList<>();
